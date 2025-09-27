@@ -1,0 +1,12 @@
+# Environment and credentials
+config/env.php
+.env
+
+# System
+.DS_Store
+Thumbs.db
+
+# Node/build (if used in future)
+node_modules/
+dist/
+build/

@@ -1,0 +1,11 @@
+# Ensure index.php handles directory requests and route all to front controller
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /api/
+  # If the requested resource doesn't exist as a file or directory, route to index.php
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.php [QSA,L]
+</IfModule>
